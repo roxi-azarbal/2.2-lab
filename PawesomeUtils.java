@@ -21,7 +21,7 @@ public class PawesomeUtils {
         if (dogId >= 100 && dogId <= 999) {
             return dogId;
         }
-        return (int) (Math.random() * 999) + 100;
+        return (int) (Math.random() * 900) + 100;
     }
 
     public static boolean hasValidTag(Dog dog) {

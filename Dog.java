@@ -8,7 +8,7 @@ public class Dog {
     private static int dogsCreated = 0;
 
     public Dog() {
-        name = "Unknown";
+        name = "Unnamed";
         ownerName = "Unknown";
         age = 1;
         dogId = 100;
@@ -22,6 +22,10 @@ public class Dog {
         this.ownerName = ownerName;
         this.age = age;
         this.dogId = PawesomeUtils.validateDogId(dogId);
+        char dogChar = PawesomeUtils.generateDogChar(this.dogId);
+        this.dogTag = PawesomeUtils.generateDogTag(this.dogId, dogChar);
+
+        this.stillInFacility = true;
         dogsCreated += 1;
     }
 
@@ -88,6 +92,6 @@ public class Dog {
         }
 
         return name.equals(other.getName()) && ownerName.equals(other.getOwnerName()) && age == other.getAge()
-                && dogTag == other.getDogTag() && stillInFacility == other.isStillInFacility();
+                && dogTag.equals(other.getDogTag()) && stillInFacility == other.isStillInFacility();
     }
 }
