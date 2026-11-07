@@ -92,7 +92,8 @@ public class DogTester {
         System.out.println("Null pickup: " + PawesomeUtils.pickup(null, "Alex"));
 
         // Both age conversion methods.
-        System.out.println("Human age: " + PawesomeUtils.convertAgeToHumanAge(new Dog("Goose", "Mila", 5, 456)));
+        System.out.println("Human age: "
+                + PawesomeUtils.convertAgeToHumanAge(new Dog("Goose", "Mila", 5, 456)));
         System.out.println("Dog years: " + PawesomeUtils.convertAgeToDogYears(49));
 
         // stretch

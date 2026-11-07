@@ -82,7 +82,8 @@ public class Dog {
     }
 
     public String toString() {
-        return ownerName + "'s dog is named" + name + " and it's " + age + " years old. It's facility status is "
+        return ownerName + "'s dog is named" + name + " and it's "
+                + age + " years old. It's facility status is "
                 + stillInFacility + " and its dog tag is " + dogTag;
     }
 
@@ -91,7 +92,8 @@ public class Dog {
             return false;
         }
 
-        return name.equals(other.getName()) && ownerName.equals(other.getOwnerName()) && age == other.getAge()
+        return name.equals(other.getName()) &&
+                ownerName.equals(other.getOwnerName()) && age == other.getAge()
                 && dogTag.equals(other.getDogTag()) && stillInFacility == other.isStillInFacility();
     }
 }

@@ -46,7 +46,8 @@ public class PawesomeUtils {
             return dog.getName() + " has left.";
         }
 
-        return "the dog can't leave because " + person + " is not the owner of " + dog.getName() + ".";
+        return "the dog can't leave because " + person
+                + " is not the owner of " + dog.getName() + ".";
     }
 
     public static int convertAgeToHumanAge(Dog dog) {
@@ -80,7 +81,8 @@ public class PawesomeUtils {
     }
 
     public static boolean isValidDog(Dog dog) {
-        return dog != null && hasName(dog) && dog.getAge() >= 0 && dog.getAge() <= 25 && dog.getDogId() >= 100
+        return dog != null && hasName(dog)
+                && dog.getAge() >= 0 && dog.getAge() <= 25 && dog.getDogId() >= 100
                 && dog.getDogId() <= 999 && hasValidTag(dog);
     }
 }
